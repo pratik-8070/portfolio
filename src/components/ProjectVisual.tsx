@@ -141,8 +141,8 @@ function MobileVisual({ active }: { active?: boolean }) {
         {[
           ['driver', 'UiAutomator2'],
           ['runner', 'WebdriverIO + Mocha'],
-          ['schedule', 'cron · scheduled'],
-          ['report', 'auto-generated'],
+          ['device', 'Android Emulator'],
+          ['design', 'POM + utilities'],
         ].map(([key, val]) => (
           <div key={key} className="rounded-lg border border-line bg-ink/80 px-3 py-2">
             <p className="text-dim">{key}</p>
