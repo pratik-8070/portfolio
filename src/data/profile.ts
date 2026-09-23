@@ -12,8 +12,8 @@ export const profile = {
   subheadline:
     'QA Automation Engineer building reliable Web, API and Mobile test automation with Playwright, TypeScript, Appium and CI/CD.',
   availability: 'Open to QA Automation opportunities',
-  experienceYears: '4.6+',
-  domains: ['FinTech', 'Supply Chain Finance', 'EdTech', 'Enterprise platforms', 'B2B SaaS'],
+  experienceYears: '2',
+  testingTypes: ['Functional', 'Regression', 'Smoke', 'Sanity', 'API', 'UI'],
   education: 'M.Sc — Kolhan University, Jharkhand',
   links: {
     email: 'pratikv8070@gmail.com',

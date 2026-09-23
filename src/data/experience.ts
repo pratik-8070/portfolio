@@ -1,6 +1,6 @@
 /**
- * TODO: Fill in dates and previous roles. Entries marked `placeholder: true`
- * render with a dashed "placeholder" style so they are easy to spot.
+ * Work history, taken from the resume. Entries marked `placeholder: true`
+ * render with a dashed "placeholder" style.
  */
 export type ExperienceItem = {
   role: string
@@ -34,14 +34,5 @@ export const experience: ExperienceItem[] = [
       'Test reporting',
       'AI-assisted scripting',
     ],
-  },
-  {
-    role: 'Previous Role', // PLACEHOLDER
-    company: 'Company Name', // PLACEHOLDER
-    context: 'Domain', // PLACEHOLDER — e.g. FinTech / Supply Chain Finance / EdTech
-    period: 'YYYY — YYYY', // PLACEHOLDER
-    placeholder: true,
-    summary: 'Add a one-line summary of this role.',
-    responsibilities: ['Responsibility', 'Responsibility', 'Responsibility'],
   },
 ]

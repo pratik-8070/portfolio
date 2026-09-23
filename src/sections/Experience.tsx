@@ -22,12 +22,12 @@ export function Experience() {
         <Timeline items={experience} />
 
         <Reveal className="mt-20 border-t border-line pt-10 md:mt-28">
-          <p className="mb-5 font-mono text-xs text-dim">// domains tested</p>
+          <p className="mb-5 font-mono text-xs text-dim">// testing types</p>
           <ul className="flex flex-wrap gap-x-8 gap-y-3 text-2xl font-medium tracking-[-0.03em] md:text-4xl">
-            {profile.domains.map((d, i) => (
+            {profile.testingTypes.map((d, i) => (
               <li key={d} className="flex items-center gap-8 text-fg/80 transition-colors hover:text-pass">
                 {d}
-                {i < profile.domains.length - 1 && <span className="text-base text-dim" aria-hidden>/</span>}
+                {i < profile.testingTypes.length - 1 && <span className="text-base text-dim" aria-hidden>/</span>}
               </li>
             ))}
           </ul>

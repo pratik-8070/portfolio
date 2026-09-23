@@ -24,13 +24,13 @@ public/         favicon.svg, og-image.png, robots.txt (add resume.pdf here)
 
 All content lives in `src/data/`. Edit it there, not in the components.
 
-## Before deploying: fill in the placeholders
+## Content source
+
+All facts on the site come from the resume (`public/resume.pdf`). Don't add claims or numbers that aren't in it.
+
+## Still to update
 
 | What | Where |
 | --- | --- |
-| Email, LinkedIn, GitHub URLs | `src/data/profile.ts` → `links` |
-| Resume PDF | put it at `public/resume.pdf` |
-| MelloUp dates | `src/data/experience.ts` → `period` |
-| Previous roles (company, role, dates, domain, summary) | `src/data/experience.ts` (dashed placeholder card) |
-| Project GitHub / demo links | `src/data/projects.ts` → `links` |
 | Deployed domain (canonical + OG URLs) | `index.html` (`your-domain.com`) |
+| Mobile framework repo link | `src/data/projects.ts` → `links` |

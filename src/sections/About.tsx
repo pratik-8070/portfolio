@@ -43,8 +43,9 @@ export function About() {
         <div className="mt-20 grid gap-12 md:mt-28 lg:grid-cols-12 lg:gap-10">
           <Reveal className="lg:col-span-4">
             <p className="text-lg leading-relaxed text-muted text-pretty">
-              I&apos;m an automation-focused QA engineer with <span className="text-fg">4.6+ years</span> across FinTech,
-              Supply Chain Finance, EdTech, enterprise platforms and B2B SaaS.
+              I&apos;m an automation-focused QA engineer with <span className="text-fg">2 years</span> of hands-on web,
+              API and mobile automation on <span className="text-fg">B2B SaaS</span> products, building frameworks from
+              scratch.
             </p>
             <p className="mt-5 text-lg leading-relaxed text-muted text-pretty">
               I build the safety net that lets teams release without holding their breath.
