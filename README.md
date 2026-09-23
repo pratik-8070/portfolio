@@ -32,5 +32,4 @@ All facts on the site come from the resume (`public/resume.pdf`). Don't add clai
 
 | What | Where |
 | --- | --- |
-| Deployed domain (canonical + OG URLs) | `index.html` (`your-domain.com`) |
 | Mobile framework repo link | `src/data/projects.ts` → `links` |
