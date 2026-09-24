@@ -52,6 +52,11 @@ export const Mail = ({ size, ...p }: IconProps) => (
     <path d="M3.5 6.5l8.5 6.5 8.5-6.5" />
   </svg>
 )
+export const Phone = ({ size, ...p }: IconProps) => (
+  <svg {...base(size)} {...p}>
+    <path d="M5 4h3.5l1.5 4.5-2 1.3a11 11 0 0 0 6.2 6.2l1.3-2 4.5 1.5V19a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" />
+  </svg>
+)
 export const FileText = ({ size, ...p }: IconProps) => (
   <svg {...base(size)} {...p}>
     <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z" />

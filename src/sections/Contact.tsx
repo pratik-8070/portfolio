@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { useState, type ReactNode } from 'react'
 import { Button } from '../components/Button'
-import { ArrowUpRight, Bug, Check, FileText, Github, Linkedin, Mail } from '../components/Icons'
+import { ArrowUpRight, Bug, Check, FileText, Github, Linkedin, Mail, Phone } from '../components/Icons'
 import { Reveal } from '../components/Reveal'
 import { SplitText } from '../components/SplitText'
 import { profile } from '../data/profile'
@@ -10,6 +10,7 @@ const channels: { label: string; value: string; href: string; icon: ReactNode; e
   { label: 'LinkedIn', value: 'Connect', href: profile.links.linkedin, icon: <Linkedin size={20} />, external: true },
   { label: 'GitHub', value: 'Browse code', href: profile.links.github, icon: <Github size={20} />, external: true },
   { label: 'Email', value: profile.links.email, href: `mailto:${profile.links.email}`, icon: <Mail size={20} /> },
+  { label: 'Phone', value: profile.links.phone, href: profile.links.phoneHref, icon: <Phone size={20} /> },
   { label: 'Resume', value: 'Download PDF', href: profile.links.resume, icon: <FileText size={20} />, download: true },
 ]
 
@@ -55,7 +56,12 @@ export function Contact() {
 
           <ul className="grid gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-2 lg:col-span-6">
             {channels.map((c, i) => (
-              <Reveal as="li" key={c.label} delay={0.1 + i * 0.06} className="bg-ink">
+              <Reveal
+                as="li"
+                key={c.label}
+                delay={0.1 + i * 0.06}
+                className={i === channels.length - 1 && channels.length % 2 ? 'bg-ink sm:col-span-2' : 'bg-ink'}
+              >
                 <a
                   href={c.href}
                   target={c.external ? '_blank' : undefined}

@@ -17,6 +17,8 @@ export const profile = {
   education: 'M.Sc — Kolhan University, Jharkhand',
   links: {
     email: 'pratikv8070@gmail.com',
+    phone: '+91 70044 52960',
+    phoneHref: 'tel:+917004452960',
     linkedin: 'https://www.linkedin.com/in/pratiklalv/',
     github: 'https://github.com/pratik-8070',
     resume: '/resume.pdf',
