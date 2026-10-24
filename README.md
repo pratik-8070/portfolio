@@ -27,9 +27,3 @@ All content lives in `src/data/`. Edit it there, not in the components.
 ## Content source
 
 All facts on the site come from the resume (`public/resume.pdf`). Don't add claims or numbers that aren't in it.
-
-## Still to update
-
-| What | Where |
-| --- | --- |
-| Mobile framework repo link | `src/data/projects.ts` → `links` |
