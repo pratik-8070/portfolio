@@ -20,7 +20,6 @@ export const experience: ExperienceItem[] = [
     company: 'MelloUp',
     context: 'B2B SaaS · Bengaluru',
     period: 'Sep 2024 — Apr 2026',
-    current: true,
     summary:
       'Built the Playwright automation framework from scratch using the Page Object Model, and automated the platform’s end-to-end B2B SaaS workflows: event tracking, attendee filtering, group creation, email campaigns and lead engagement.',
     highlights: ['95% automation coverage', '~60–70% less manual regression time (est.)'],

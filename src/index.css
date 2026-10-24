@@ -8,7 +8,7 @@
   --color-line-strong: rgb(255 255 255 / 0.16);
   --color-fg: #ededee;
   --color-muted: #9a9aa2;
-  --color-dim: #6b6b73;
+  --color-dim: #7a7a82; /* 4.7:1 on ink, meets WCAG AA for small text */
   --color-pass: #c8f031;
   --color-pass-soft: rgb(200 240 49 / 0.12);
   --color-bug: #ff5c4d;

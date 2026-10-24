@@ -10,7 +10,55 @@ export function ProjectVisual({ kind, active }: { kind: VisualKind; active?: boo
       return <SlackJiraFlow active={active} />
     case 'test-agent':
       return <TestAgentVisual active={active} />
+    case 'playwright':
+      return <PlaywrightVisual active={active} />
   }
+}
+
+const k = 'text-[#c792ea]' // keyword
+const s = 'text-pass' // string
+const f = 'text-info' // function
+const c = 'text-dim' // comment
+
+function PlaywrightVisual({ active }: { active?: boolean }) {
+  const lines = [
+    <><span className={c}>// tests/cart.spec.ts</span></>,
+    <><span className={k}>test</span>(<span className={s}>'add to cart'</span>, <span className={k}>async</span> ({'{'} page {'}'}) =&gt; {'{'}</>,
+    <>&nbsp;&nbsp;<span className={k}>const</span> login = <span className={k}>new</span> <span className={f}>LoginPage</span>(page)</>,
+    <>&nbsp;&nbsp;<span className={k}>await</span> login.<span className={f}>signIn</span>(user)</>,
+    <>&nbsp;&nbsp;<span className={k}>await</span> products.<span className={f}>select</span>(<span className={s}>'Backpack'</span>)</>,
+    <>&nbsp;&nbsp;<span className={k}>await</span> cart.<span className={f}>add</span>()</>,
+    <>&nbsp;&nbsp;<span className={k}>await</span> <span className={f}>expect</span>(cart.items).<span className={f}>toHaveCount</span>(1)</>,
+    <>{'}'})</>,
+  ]
+  return (
+    <div className="relative h-full w-full p-5 md:p-7">
+      <div className="h-full overflow-hidden rounded-xl border border-line bg-ink/80">
+        <div className="flex items-center gap-2 border-b border-line px-4 py-2.5 font-mono text-[10.5px] text-dim">
+          <span className="rounded bg-white/5 px-2 py-0.5 text-muted">cart.spec.ts</span>
+          <span>LoginPage.ts</span>
+          <span className="hidden sm:inline">allure-results/</span>
+        </div>
+        <pre className="overflow-hidden p-4 font-mono text-[11px] leading-[1.9] text-fg/90 md:text-[12.5px]">
+          {lines.map((l, i) => (
+            <motion.div
+              key={i}
+              className="flex gap-4 whitespace-nowrap"
+              initial={{ opacity: 0.35 }}
+              animate={{ opacity: active ? 1 : 0.8 }}
+              transition={{ delay: active ? i * 0.05 : 0 }}
+            >
+              <span className="w-4 shrink-0 text-right text-dim/60 select-none">{i + 1}</span>
+              <span>{l}</span>
+            </motion.div>
+          ))}
+        </pre>
+      </div>
+      <div className="absolute right-3 bottom-3 flex items-center gap-2 rounded-full border border-pass/30 bg-ink/90 px-3 py-1.5 font-mono text-[11px] text-pass backdrop-blur md:right-5 md:bottom-5">
+        <Check size={12} /> passed · GitHub Actions
+      </div>
+    </div>
+  )
 }
 
 export function SlackJiraFlow({ active, compact }: { active?: boolean; compact?: boolean }) {

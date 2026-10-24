@@ -131,7 +131,7 @@ export function Process() {
                   className={cn(
                     'mt-2 font-medium tracking-[-0.035em] transition-colors duration-500',
                     isLast ? 'text-4xl md:text-6xl' : 'text-3xl md:text-[2.75rem] md:leading-[1.05]',
-                    state === 'queued' ? 'text-fg/35' : isLast ? 'text-pass' : 'text-fg',
+                    state === 'queued' ? 'text-fg/45' : isLast ? 'text-pass' : 'text-fg',
                   )}
                 >
                   {step.title}

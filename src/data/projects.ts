@@ -3,7 +3,7 @@
  * `links` are optional. Leave a value undefined and the card shows "Link coming soon".
  * TODO: add real GitHub / demo URLs where applicable.
  */
-export type ProjectVisual = 'slack-jira' | 'test-agent'
+export type ProjectVisual = 'test-agent' | 'slack-jira' | 'playwright'
 
 export type Project = {
   id: string
@@ -120,5 +120,37 @@ export const projects: Project[] = [
       'Add automated tests for the payload mapping and modal validation',
     ],
     links: { github: 'https://github.com/pratik-8070/slack-jira-bug-reporter' },
+  },
+  {
+    id: 'playwright-ecommerce',
+    index: '03',
+    title: 'Playwright E‑Commerce Automation Framework',
+    tagline: 'A Page Object framework, built from scratch, covering login through cart validation, with CI on every push.',
+    visual: 'playwright',
+    tags: ['Playwright', 'JavaScript', 'POM', 'Allure', 'GitHub Actions'],
+    problem:
+      'E-commerce flows break in small, costly ways: a cart total that is off, or an element that renders late. Manual regression can’t keep pace with every change.',
+    built: [
+      'Automation framework built from scratch',
+      'Page Object Model architecture',
+      'Login, product selection and add-to-cart flows',
+      'Cart validation',
+      'Robust handling of dynamic elements',
+      'Reusable fixtures and assertions',
+      'Allure reporting, published as a live report',
+      'GitHub Actions CI on push, plus scheduled daily runs',
+    ],
+    technologies: ['Playwright', 'JavaScript', 'TypeScript', 'Allure', 'GitHub Actions'],
+    approach: [
+      'Page objects keep locators and actions out of test logic',
+      'Web-first assertions and auto-waiting for dynamic content',
+      'Every push, and a daily schedule, runs the suite in CI and publishes a report',
+    ],
+    result:
+      'A maintainable, CI-integrated suite that validates the core purchase journey automatically and reports clearly when something breaks.',
+    links: {
+      demo: 'https://automation-exercise-pratik.vercel.app/',
+      demoLabel: 'Live Allure report',
+    },
   },
 ]

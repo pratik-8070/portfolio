@@ -10,10 +10,15 @@ export function Footer() {
         <p>
           © {year} {profile.name}
         </p>
-        <p className="flex items-center gap-2">
+        <a
+          href="https://github.com/pratik-8070/portfolio/actions/workflows/e2e.yml"
+          target="_blank"
+          rel="noreferrer"
+          className="flex items-center gap-2 transition-colors hover:text-fg"
+        >
           <span className="h-1.5 w-1.5 rounded-full bg-pass" aria-hidden />
-          build: passing · designed &amp; tested by hand
-        </p>
+          tests: Playwright on every push · desktop + mobile · a11y
+        </a>
         <button
           type="button"
           onClick={() => scrollToId('top')}

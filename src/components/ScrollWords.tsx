@@ -21,7 +21,7 @@ export function ScrollWords({ words, className, as = 'p', offset = ['start 85%',
   return (
     <Tag ref={ref as never} className={cn('relative', className)}>
       <span className="sr-only">{plain}</span>
-      <span aria-hidden>
+      <span aria-hidden data-scroll-reveal>
         {words.map((w, i) => (
           <span key={i}>
             <Word word={w} progress={scrollYProgress} range={[i / words.length, (i + 1) / words.length]} />

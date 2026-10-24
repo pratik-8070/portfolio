@@ -60,6 +60,8 @@ export const stack: StackCategory[] = [
     tools: [
       { name: 'Allure', note: 'Test reports' },
       { name: 'JIRA', note: 'Defect tracking' },
+      { name: 'Slack Bolt', note: 'QA bots' },
+      { name: 'Google Sheets API', note: 'Test case export' },
       { name: 'HTML Reports', note: 'Built-in' },
       { name: 'Trace Viewer', note: 'Debugging' },
     ],
@@ -67,11 +69,14 @@ export const stack: StackCategory[] = [
   {
     id: 'ai',
     name: 'AI',
-    command: 'assist --review-by human',
-    description: 'Co-pilots for speed. Every output is reviewed with QA judgment.',
+    command: '/generate-test-cases prd.md',
+    description: 'Assistants for speed, and AI tools I build, with checks that gate every output. QA judgment stays with me.',
     tools: [
+      { name: 'Claude Code', note: 'Agent skills' },
+      { name: 'Claude Agent SDK', note: 'Headless agent' },
+      { name: 'Gemini API', note: 'Free-tier LLM' },
+      { name: 'Python', note: 'Tooling' },
       { name: 'ChatGPT', note: 'Assistant' },
-      { name: 'Claude', note: 'Assistant' },
       { name: 'GitHub Copilot', note: 'In-editor' },
     ],
   },

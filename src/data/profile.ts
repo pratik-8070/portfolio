@@ -3,14 +3,14 @@ export const profile = {
   name: 'Pratik Lal Vishwakarma',
   firstName: 'Pratik',
   role: 'QA Automation Engineer',
-  positioning: 'QA Automation Engineer specializing in Web, API & Mobile Test Automation.',
+  positioning: 'QA Automation Engineer specializing in Web, API & Mobile Test Automation and AI-powered QA tooling.',
   headline: {
     before: 'I find the bugs',
     emphasis: 'users',
     after: 'shouldn’t have to.',
   },
   subheadline:
-    'QA Automation Engineer building reliable Web, API and Mobile test automation with Playwright, TypeScript, Appium and CI/CD.',
+    'QA Automation Engineer building reliable Web, API and Mobile test automation with Playwright, TypeScript, Appium and CI/CD, and AI tools that make QA faster.',
   availability: 'Open to QA Automation opportunities',
   experienceYears: '2',
   testingTypes: ['Functional', 'Regression', 'Smoke', 'Sanity', 'API', 'UI'],
@@ -49,4 +49,7 @@ export const marqueeItems = [
   'Smoke & Sanity',
   'CI/CD',
   'AI-assisted testing',
+  'Python',
+  'AI agents',
+  'Slack & Jira integrations',
 ]

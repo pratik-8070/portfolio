@@ -8,4 +8,4 @@ export const aiUseCases = [
   'Documentation',
 ]
 
-export const aiTools = ['ChatGPT', 'Claude', 'GitHub Copilot']
+export const aiTools = ['Claude Code', 'Claude Agent SDK', 'Gemini API', 'ChatGPT', 'GitHub Copilot']
