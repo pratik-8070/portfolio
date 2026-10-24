@@ -26,8 +26,46 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    id: 'slack-jira',
+    id: 'test-case-agent',
     index: '01',
+    title: 'AI Test Case Generation Agent',
+    tagline: 'Paste a PRD, Confluence page or Figma link into a Slack form and get validated, traceable test cases in a Google Sheet a few minutes later.',
+    visual: 'test-agent',
+    tags: ['AI Agent', 'Python', 'Claude', 'Gemini', 'Slack Bolt', 'Google Sheets'],
+    problem:
+      'Writing test cases from PRDs and designs is slow and uneven. Negative and boundary cases get missed, the link back to requirements is lost, and every PRD revision means rewriting the suite.',
+    built: [
+      'Claude Code skill (/generate-test-cases) driven by a staged QA workflow',
+      'Input classification: stories, acceptance criteria, PRDs, API specs, UI designs, existing suites',
+      'Requirement extraction that keeps source IDs (FR-6, AC2) for traceability',
+      'Clarification gate: asks about missing rules instead of inventing them',
+      'Positive, negative, boundary, validation and edge-case scenario design',
+      'Deterministic checks: schema, vague wording, duplicates, coverage of every acceptance criterion',
+      'Slack /test-case form that reads Confluence pages, Figma screens and docs by itself',
+      'Google Sheet per run with Test type and P0–P3 priority dropdowns',
+      'Versioned knowledge base in Google Sheets that reuses and updates tests when the PRD changes',
+    ],
+    technologies: ['Python', 'Claude Code', 'Claude Agent SDK', 'Gemini API', 'Slack Bolt', 'Confluence REST API', 'Figma REST API', 'Google Sheets API', 'JSON Schema'],
+    approach: [
+      'The AI does the judgement work; plain Python checks gate every suite before it ships',
+      'Never invent requirements: missing details become questions or clearly flagged assumptions',
+      'Every test case traces back to a requirement, acceptance criterion or business rule',
+      'Test cases edited by a person are protected; source changes only flag them for review',
+      'The bot fetches links itself, so the AI never gets network access',
+    ],
+    result:
+      'From a single Confluence PRD link: 44 test cases covering all 34 requirements, 17 acceptance criteria and 5 business rules, in about four minutes on Gemini’s free tier. Each run is saved as a new version in the knowledge base, so a revised PRD updates the existing suite instead of replacing it.',
+    nextSteps: [
+      'Host the Slack bot on an always-on server instead of a laptop',
+      'Export straight to Jira and test management tools',
+      'Generate Playwright tests from the approved test cases',
+      'Measure quality across models (free-tier Gemini suites are thinner than Claude’s)',
+    ],
+    links: { github: 'https://github.com/pratik-8070/test-case-generation-agent' },
+  },
+  {
+    id: 'slack-jira',
+    index: '02',
     title: 'Slack → Jira Bug Reporting Tool',
     tagline: 'Type /report in Slack and fill in a bug form. A Jira bug is filed through the REST API, and the ticket link comes straight back to you.',
     visual: 'slack-jira',
@@ -82,43 +120,5 @@ export const projects: Project[] = [
       'Add automated tests for the payload mapping and modal validation',
     ],
     links: { github: 'https://github.com/pratik-8070/slack-jira-bug-reporter' },
-  },
-  {
-    id: 'test-case-agent',
-    index: '02',
-    title: 'AI Test Case Generation Agent',
-    tagline: 'Paste a PRD, Confluence page or Figma link into a Slack form and get validated, traceable test cases in a Google Sheet a few minutes later.',
-    visual: 'test-agent',
-    tags: ['AI Agent', 'Python', 'Claude', 'Gemini', 'Slack Bolt', 'Google Sheets'],
-    problem:
-      'Writing test cases from PRDs and designs is slow and uneven. Negative and boundary cases get missed, the link back to requirements is lost, and every PRD revision means rewriting the suite.',
-    built: [
-      'Claude Code skill (/generate-test-cases) driven by a staged QA workflow',
-      'Input classification: stories, acceptance criteria, PRDs, API specs, UI designs, existing suites',
-      'Requirement extraction that keeps source IDs (FR-6, AC2) for traceability',
-      'Clarification gate: asks about missing rules instead of inventing them',
-      'Positive, negative, boundary, validation and edge-case scenario design',
-      'Deterministic checks: schema, vague wording, duplicates, coverage of every acceptance criterion',
-      'Slack /test-case form that reads Confluence pages, Figma screens and docs by itself',
-      'Google Sheet per run with Test type and P0–P3 priority dropdowns',
-      'Versioned knowledge base in Google Sheets that reuses and updates tests when the PRD changes',
-    ],
-    technologies: ['Python', 'Claude Code', 'Claude Agent SDK', 'Gemini API', 'Slack Bolt', 'Confluence REST API', 'Figma REST API', 'Google Sheets API', 'JSON Schema'],
-    approach: [
-      'The AI does the judgement work; plain Python checks gate every suite before it ships',
-      'Never invent requirements: missing details become questions or clearly flagged assumptions',
-      'Every test case traces back to a requirement, acceptance criterion or business rule',
-      'Test cases edited by a person are protected; source changes only flag them for review',
-      'The bot fetches links itself, so the AI never gets network access',
-    ],
-    result:
-      'From a single Confluence PRD link: 44 test cases covering all 34 requirements, 17 acceptance criteria and 5 business rules, in about four minutes on Gemini’s free tier. Each run is saved as a new version in the knowledge base, so a revised PRD updates the existing suite instead of replacing it.',
-    nextSteps: [
-      'Host the Slack bot on an always-on server instead of a laptop',
-      'Export straight to Jira and test management tools',
-      'Generate Playwright tests from the approved test cases',
-      'Measure quality across models (free-tier Gemini suites are thinner than Claude’s)',
-    ],
-    links: { github: 'https://github.com/pratik-8070/test-case-generation-agent' },
   },
 ]
